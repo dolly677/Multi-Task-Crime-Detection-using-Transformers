@@ -1,4 +1,4 @@
-# 🧠 One Brain, Two Heads: A DeBERTa-Based Multi-Task Framework for Crime Detection on Twitter (X)
+#  A DeBERTa-Based Multi-Task Framework for Crime Detection on Twitter (X)
 
 ## 📌 Overview
 
@@ -11,20 +11,25 @@ This project introduces a **unified multi-task transformer framework** called:
 The architecture leverages a **shared DeBERTa-v3-base encoder** with two parallel task-specific heads to simultaneously:
 
 ✅ Detect crime-related tweets (Binary Classification)
+
 ✅ Categorize crime into fine-grained sub-types (Multi-Class Classification)
 
 Unlike many prior works, this approach is **fully text-only**, scalable, and does not rely on metadata or multimodal inputs.
 
 
+
 ## 🚀 Key Contributions
 
 ✔️ Novel **multi-task architecture** reducing error propagation
+
 ✔️ Hybrid dataset construction with **zero-shot labeling + human verification**
+
 ✔️ Weighted composite loss to address **class imbalance**
+
 ✔️ Transformer-based contextual modeling for noisy social media text
+
 ✔️ Achieved strong performance without auxiliary metadata
 
----
 
 ## 🏗️ Architecture: One Brain, Two Heads
 
@@ -44,7 +49,7 @@ Predicts whether a tweet contains criminal intent.
 * Sigmoid activation
 * Optimized using **Binary Cross-Entropy Loss**
 
----
+
 
 ### 🔹 Head B — Multi-Class Categorization
 
@@ -54,7 +59,7 @@ Identifies the specific crime type.
 * Softmax activation
 * Optimized using **Focal Loss** to handle class imbalance
 
----
+
 
 ## ⚙️ Composite Loss Function
 
@@ -70,7 +75,7 @@ Where:
 | λ2        | 0.7   | Prioritizes fine-grained classification |
 | γ         | 2.0   | Focuses training on hard examples       |
 
----
+
 
 ## 📊 Dataset Construction Pipeline
 
@@ -90,7 +95,7 @@ A hybrid annotation framework was designed to ensure both **scalability and labe
 3. Manual verification for low-confidence samples
 4. SBERT embeddings + K-Means clustering for crime sub-types
 
----
+
 
 ## 🧾 Crime Categories
 
@@ -100,7 +105,7 @@ A hybrid annotation framework was designed to ensure both **scalability and labe
 * Extremist Propaganda
 * Sexual Violence
 
----
+
 
 ## 🧪 Experimental Setup
 
@@ -115,7 +120,7 @@ A hybrid annotation framework was designed to ensure both **scalability and labe
 | Max Sequence Length | 128                    |
 | Dropout             | 0.3                    |
 
----
+
 
 ## 📈 Results
 
@@ -127,13 +132,14 @@ A hybrid annotation framework was designed to ensure both **scalability and labe
 
 👉 DeBERTa outperformed larger models, highlighting the strength of **disentangled attention** for nuanced crime-context understanding.
 
----
+
 
 ## 🔎 Error Analysis
 
 The model showed:
 
 ✅ Near-perfect sensitivity for **Sexual Violence**
+
 ✅ Strong minority-class handling via Focal Loss
 
 Primary confusion occurred between:
@@ -142,7 +148,7 @@ Primary confusion occurred between:
 
 — largely due to semantic overlap.
 
----
+
 
 ## 💻 Installation
 
@@ -151,8 +157,6 @@ git clone https://github.com/dolly677/Multi-Task-Crime-Detection-using-Transform
 cd YOUR_REPO
 pip install -r requirements.txt
 ```
-
----
 
 ## ▶️ Usage
 
@@ -168,8 +172,6 @@ Example inference:
 python predict.py --text "Police arrested the suspect after the attack."
 ```
 
----
-
 ## 🔮 Future Work
 
 * Real-time streaming crime detection
@@ -177,7 +179,6 @@ python predict.py --text "Police arrested the suspect after the attack."
 * Explainable AI for law enforcement
 * Multimodal fusion with images/video
 
----
 
 ## 🎓 Research Impact
 
@@ -187,7 +188,6 @@ This work demonstrates that:
 
 The proposed architecture provides a practical foundation for automated public-safety intelligence systems.
 
----
 
 ## 🤝 Contributions
 
