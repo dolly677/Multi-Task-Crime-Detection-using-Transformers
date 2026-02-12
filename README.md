@@ -5,6 +5,7 @@
 Social media platforms such as **Twitter (now X)** generate massive volumes of real-time textual data related to crime, conflict, and public safety. However, tweets are often **short, noisy, and context-dependent**, making automated crime detection a challenging research problem.
 
 This project introduces a **unified multi-task transformer framework** called:
+
 > **🧠 One Brain, Two Heads**
 
 The architecture leverages a **shared DeBERTa-v3-base encoder** with two parallel task-specific heads to simultaneously:
@@ -13,6 +14,7 @@ The architecture leverages a **shared DeBERTa-v3-base encoder** with two paralle
 ✅ Categorize crime into fine-grained sub-types (Multi-Class Classification)
 
 Unlike many prior works, this approach is **fully text-only**, scalable, and does not rely on metadata or multimodal inputs.
+
 
 ## 🚀 Key Contributions
 
