@@ -2,9 +2,13 @@
 
 ## 📌 Overview
 
+---
+
 Social media platforms such as **Twitter (now X)** generate massive volumes of real-time textual data related to crime, conflict, and public safety. However, tweets are often **short, noisy, and context-dependent**, making automated crime detection a challenging research problem.
 
 This project introduces a **unified multi-task transformer framework** called:
+
+---
 
 > **🧠 One Brain, Two Heads**
 
